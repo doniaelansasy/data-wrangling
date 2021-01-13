@@ -1,0 +1,3486 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.20.1106.0321                               -->
+<workbook original-version='18.1' source-build='2020.4.0 (20204.20.1106.0321)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='combined_archive+' inline='true' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_archive' name='textscan.10azget0u6zho81cscdd20iji53c'>
+            <connection class='textscan' directory='C:/Users/Donia Elansasy/Documents/python/we_rate_dogs/after saving' filename='combined_archive.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.10azget0u6zho81cscdd20iji53c' name='combined_archive.csv' table='[combined_archive#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='tweet_id' ordinal='1' />
+            <column datatype='date' name='timestamp' ordinal='2' />
+            <column datatype='string' name='source' ordinal='3' />
+            <column datatype='string' name='expanded_urls' ordinal='4' />
+            <column datatype='real' name='rating_numerator' ordinal='5' />
+            <column datatype='real' name='rating_denominator' ordinal='6' />
+            <column datatype='string' name='name' ordinal='7' />
+            <column datatype='integer' name='year' ordinal='8' />
+            <column datatype='string' name='jpg_url' ordinal='9' />
+            <column datatype='real' name='img_num' ordinal='10' />
+            <column datatype='string' name='text_url' ordinal='11' />
+            <column datatype='string' name='text_tweet' ordinal='12' />
+            <column datatype='string' name='dog_stage' ordinal='13' />
+            <column datatype='integer' name='retweet_count' ordinal='14' />
+            <column datatype='integer' name='favorite_count' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.10azget0u6zho81cscdd20iji53c' name='combined_archive.csv' table='[combined_archive#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='integer' name='tweet_id' ordinal='1' />
+              <column datatype='date' name='timestamp' ordinal='2' />
+              <column datatype='string' name='source' ordinal='3' />
+              <column datatype='string' name='expanded_urls' ordinal='4' />
+              <column datatype='real' name='rating_numerator' ordinal='5' />
+              <column datatype='real' name='rating_denominator' ordinal='6' />
+              <column datatype='string' name='name' ordinal='7' />
+              <column datatype='integer' name='year' ordinal='8' />
+              <column datatype='string' name='jpg_url' ordinal='9' />
+              <column datatype='real' name='img_num' ordinal='10' />
+              <column datatype='string' name='text_url' ordinal='11' />
+              <column datatype='string' name='text_tweet' ordinal='12' />
+              <column datatype='string' name='dog_stage' ordinal='13' />
+              <column datatype='integer' name='retweet_count' ordinal='14' />
+              <column datatype='integer' name='favorite_count' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.10azget0u6zho81cscdd20iji53c' name='image_prediction.csv' table='[image_prediction#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='tweet_id' ordinal='0' />
+              <column datatype='integer' name='trial' ordinal='1' />
+              <column datatype='string' name='prediction' ordinal='2' />
+              <column datatype='real' name='confidence' ordinal='3' />
+              <column datatype='boolean' name='is_dog' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[F1]' value='[combined_archive.csv].[F1]' />
+          <map key='[confidence]' value='[image_prediction.csv].[confidence]' />
+          <map key='[dog_stage]' value='[combined_archive.csv].[dog_stage]' />
+          <map key='[expanded_urls]' value='[combined_archive.csv].[expanded_urls]' />
+          <map key='[favorite_count]' value='[combined_archive.csv].[favorite_count]' />
+          <map key='[img_num]' value='[combined_archive.csv].[img_num]' />
+          <map key='[is_dog]' value='[image_prediction.csv].[is_dog]' />
+          <map key='[jpg_url]' value='[combined_archive.csv].[jpg_url]' />
+          <map key='[name]' value='[combined_archive.csv].[name]' />
+          <map key='[prediction]' value='[image_prediction.csv].[prediction]' />
+          <map key='[rating_denominator]' value='[combined_archive.csv].[rating_denominator]' />
+          <map key='[rating_numerator]' value='[combined_archive.csv].[rating_numerator]' />
+          <map key='[retweet_count]' value='[combined_archive.csv].[retweet_count]' />
+          <map key='[source]' value='[combined_archive.csv].[source]' />
+          <map key='[text_tweet]' value='[combined_archive.csv].[text_tweet]' />
+          <map key='[text_url]' value='[combined_archive.csv].[text_url]' />
+          <map key='[timestamp]' value='[combined_archive.csv].[timestamp]' />
+          <map key='[trial]' value='[image_prediction.csv].[trial]' />
+          <map key='[tweet_id (image_prediction.csv)]' value='[image_prediction.csv].[tweet_id]' />
+          <map key='[tweet_id]' value='[combined_archive.csv].[tweet_id]' />
+          <map key='[year]' value='[combined_archive.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweet_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tweet_id]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>tweet_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>source</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>expanded_urls</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[expanded_urls]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>expanded_urls</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating_numerator</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rating_numerator]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>rating_numerator</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating_denominator</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rating_denominator]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>rating_denominator</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jpg_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jpg_url]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>jpg_url</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>img_num</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[img_num]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>img_num</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[text_url]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>text_url</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_tweet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[text_tweet]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>text_tweet</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dog_stage</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dog_stage]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>dog_stage</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>retweet_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[retweet_count]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>retweet_count</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>favorite_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[favorite_count]</local-name>
+            <parent-name>[combined_archive.csv]</parent-name>
+            <remote-alias>favorite_count</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweet_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tweet_id (image_prediction.csv)]</local-name>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias>tweet_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trial</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[trial]</local-name>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias>trial</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prediction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[prediction]</local-name>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias>prediction</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>confidence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[confidence]</local-name>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias>confidence</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_dog</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_dog]</local-name>
+            <parent-name>[image_prediction.csv]</parent-name>
+            <remote-alias>is_dog</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='first_trial' datatype='boolean' name='[Calculation_1263259763371311107]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[trial] == 1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='combined_archive.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='image_prediction.csv' datatype='table' name='[__tableau_internal_object_id__].[image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230]' role='measure' type='quantitative' />
+      <column caption='Confidence' datatype='real' name='[confidence]' role='measure' type='quantitative' />
+      <column caption='Dog Stage' datatype='string' name='[dog_stage]' role='dimension' type='nominal' />
+      <column caption='Expanded Urls' datatype='string' name='[expanded_urls]' role='dimension' type='nominal' />
+      <column caption='Favorite Count' datatype='integer' name='[favorite_count]' role='measure' type='quantitative' />
+      <column caption='Img Num' datatype='real' name='[img_num]' role='dimension' type='ordinal' />
+      <column caption='Is Dog' datatype='boolean' name='[is_dog]' role='dimension' type='nominal' />
+      <column caption='Jpg Url' datatype='string' name='[jpg_url]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Prediction' datatype='string' name='[prediction]' role='dimension' type='nominal' />
+      <column caption='Rating Denominator' datatype='real' name='[rating_denominator]' role='measure' type='quantitative' />
+      <column caption='Rating Numerator' datatype='real' name='[rating_numerator]' role='measure' type='quantitative' />
+      <column caption='Retweet Count' datatype='integer' name='[retweet_count]' role='measure' type='quantitative' />
+      <column caption='Source' datatype='string' name='[source]' role='dimension' type='nominal' />
+      <column caption='Text Tweet' datatype='string' name='[text_tweet]' role='dimension' type='nominal' />
+      <column caption='Text Url' datatype='string' name='[text_url]' role='dimension' type='nominal' />
+      <column caption='Timestamp' datatype='date' name='[timestamp]' role='dimension' type='ordinal' />
+      <column caption='Tweet Id (Image Prediction.Csv)' datatype='integer' name='[tweet_id (image_prediction.csv)]' role='dimension' type='ordinal' />
+      <column caption='Tweet Id' datatype='integer' name='[tweet_id]' role='dimension' type='ordinal' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[favorite_count]' derivation='Avg' name='[avg:favorite_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[retweet_count]' derivation='Avg' name='[avg:retweet_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tweet_id (image_prediction.csv)]' derivation='Count' name='[cnt:tweet_id (image_prediction.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[prediction]' derivation='None' name='[none:prediction:nk]' pivot='key' type='nominal' />
+      <column-instance column='[favorite_count]' derivation='Sum' name='[sum:favorite_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[retweet_count]' derivation='Sum' name='[sum:retweet_count:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:favorite_count:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[sum:favorite_count:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[Parameters].[trial Parameter]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id (image_prediction.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:retweet_count:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[sum:retweet_count:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:prediction:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;African_crocodile&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;bagel&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;bath_towel&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;black-and-tan_coonhound&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;boxer&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;cannon&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;chimpanzee&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;conch&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;crutch&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;drumstick&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;file&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Gila_monster&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;grocery_store&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;hermit_crab&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Italian_greyhound&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;kuvasz&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Loafer&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;meerkat&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;mouse&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;otter&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;peacock&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;polecat&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;quill&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;rotisserie&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;sea_urchin&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;sliding_door&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;squirrel_monkey&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;swab&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;tiger&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;tripod&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;water_bottle&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;wood_rabbit&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;abaya&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Arabian_camel&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;barbershop&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;bib&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Border_collie&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;bull_mastiff&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;chain_saw&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;coffeepot&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;cradle&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;dining_table&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;EntleBucher&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;gar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Great_Pyrenees&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;hand-held_computer&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ice_lolly&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;kelpie&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;leopard&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;malinois&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;mitten&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Norwich_terrier&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;paper_towel&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ping-pong_ball&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;printer&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;remote_control&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;scorpion&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;shower_curtain&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;sorrel&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;studio_couch&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;television&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;toy_terrier&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;waffle_iron&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;window_screen&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;acorn_squash&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;assault_rifle&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;basenji&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;birdhouse&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bouvier_des_Flandres&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;cab&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;chest&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;comic_book&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;crayfish&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;dogsled&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;European_fire_salamander&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;geyser&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;greenhouse&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;harvester&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Irish_setter&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;king_penguin&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;lighter&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;mashed_potato&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;mortarboard&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;orange&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;park_bench&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;platypus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;pug&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rhodesian_ridgeback&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;screw&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;silky_terrier&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;spindle&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;sundial&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;three-toed_sloth&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;tree_frog&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;wallet&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;wire-haired_fox_terrier&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Airedale&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;balloon&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;beacon&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;bluetick&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;breastplate&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Cardigan&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;cliff&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;coral_fungus&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;dalmatian&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;echidna&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;folding_chair&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;golfcart&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;guinea_pig&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;horse_cart&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;jean&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;lakeside&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;loupe&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;microwave&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;muzzle&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;oxygen_mask&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Pembroke&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;pool_table&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;radio_telescope&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;saltshaker&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Shetland_sheepdog&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;snow_leopard&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;starfish&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;switch&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;titi&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;tusker&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Weimaraner&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Yorkshire_terrier&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;African_grey&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;bakery&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;bathing_cap&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;black-footed_ferret&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Brabancon_griffon&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;canoe&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;china_cabinet&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;confectionery&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;cuirass&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;dugong&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;fire_engine&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;go-kart&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;groenendael&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;hippopotamus&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;jack-o&apos;-lantern&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Labrador_retriever&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;loggerhead&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;menu&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;mousetrap&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;otterhound&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;pedestal&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;police_van&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;quilt&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Rottweiler&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sealyham_terrier&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;slug&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Staffordshire_bullterrier&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;sweatshirt&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;tiger_cat&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;trombone&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;water_buffalo&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;wooden_spoon&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;affenpinscher&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Australian_terrier&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;basketball&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;bison&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;bow&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;cairn&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;chickadee&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;common_iguana&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;crib&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;doormat&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;European_gallinule&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;giant_panda&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;grey_fox&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;hatchet&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Irish_terrier&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;knee_pad&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;limousine&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;mask&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;mosquito_net&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;orangutan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;partridge&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;plow&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;punching_bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;rifle&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;scuba_diver&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ski_mask&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;sports_car&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;sunglass&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Tibetan_mastiff&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;trench_coat&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;warthog&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;wok&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Appenzeller&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;barbell&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;bell_cote&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;bookcase&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;bucket&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;chain&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;cockroach&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;cowboy_hat&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;dhole&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;English_springer&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;frilled_lizard&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Great_Dane&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;hamster&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ibizan_hound&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;junco&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;leatherback_turtle&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;maillot&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;minivan&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Norfolk_terrier&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;palace&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;piggy_bank&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;prayer_rug&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;redbone&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;schipperke&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;shovel&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;solar_dish&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;street_sign&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;teapot&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;tow_truck&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;vizsla&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;wig&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;academic_gown&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Arctic_fox&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;barracouta&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;bighorn&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Border_terrier&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;bulletproof_vest&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;cheeseburger&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;coho&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;crane&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;dishwasher&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;envelope&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;gas_pump&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;great_white_shark&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;handkerchief&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Indian_elephant&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Kerry_blue_terrier&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;lesser_panda&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Maltese_dog&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;mongoose&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;notebook&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;papillon&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;pitcher&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;prison&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;restaurant&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Scotch_terrier&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;siamang&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;space_heater&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;suit&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;tennis_ball&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;toyshop&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Walker_hound&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;window_shade&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;American_Staffordshire_terrier&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;banded_gecko&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Bedlington_terrier&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;bonnet&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;brown_bear&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;carton&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;cock&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;cougar&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;desk&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;English_foxhound&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;French_horn&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;gorilla&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;hammerhead&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;hyena&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;jigsaw_puzzle&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;leaf_beetle&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Madagascar_cat&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;miniature_schnauzer&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Newfoundland&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;paintbrush&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;pickup&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;power_drill&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;red_fox&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;sandbar&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;shopping_basket&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;sock&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;stone_wall&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;tailed_frog&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;torch&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;valley&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;whiptail&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Afghan_hound&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;axolotl&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;basset&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;black_swan&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;bow_tie&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;can_opener&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chihuahua&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;common_newt&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;croquet_ball&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;dough&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;feather_boa&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;giant_schnauzer&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;grey_whale&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;hay&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Irish_water_spaniel&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;koala&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;lion&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;maze&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;motor_scooter&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;oscilloscope&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;passenger_car&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;plunger&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;purse&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;robin&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;sea_cucumber&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;skunk&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;spotlight&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;sunglasses&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Tibetan_terrier&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;triceratops&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;washbasin&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;wolf_spider&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;alp&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ballplayer&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;beagle&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;boathouse&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;briard&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;cardigan&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;cloak&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;coral_reef&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;dam&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;eel&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;fountain&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;gondola&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;hair_slide&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;hotdog&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;jeep&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;lampshade&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;lumbermill&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;military_uniform&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;nail&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;paddle&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;pencil_box&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;pop_bottle&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;rain_barrel&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Saluki&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;shield&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;snowmobile&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;steam_locomotive&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;syringe&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;toaster&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;umbrella&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Welsh_springer_spaniel&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;zebra&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;American_alligator&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;banana&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;bearskin&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;bobsled&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Brittany_spaniel&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;cardoon&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;clog&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;corn&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;damselfly&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Egyptian_cat&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;four-poster&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;goose&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;hair_spray&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;house_finch&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;jellyfish&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;laptop&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;lynx&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;miniature_pinscher&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;neck_brace&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;paddlewheel&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Persian_cat&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;porcupine&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ram&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Samoyed&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Shih-Tzu&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;soap_dispenser&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;stingray&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;tabby&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;toilet_seat&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;upright&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;West_Highland_white_terrier&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Angora&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;bannister&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;bee_eater&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;book_jacket&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;bubble&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;cash_machine&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;cocker_spaniel&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;cowboy_boot&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;desktop_computer&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;English_setter&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;French_loaf&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;grand_piano&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;hamper&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ibex&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;joystick&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;leafhopper&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;mailbox&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;minibus&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;nipple&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;pajama&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;pier&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;prairie_chicken&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;red_wolf&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;sarong&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;shopping_cart&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;soft-coated_wheaten_terrier&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;stove&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;tarantula&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;toucan&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;viaduct&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;white_wolf&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;apron&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;barber_chair&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Bernese_mountain_dog&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;bookshop&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;buckeye&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;chain_mail&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;coffee_mug&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;coyote&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;dingo&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;entertainment_center&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;fur_coat&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;great_grey_owl&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;hand_blower&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ice_bear&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;keeshond&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Leonberg&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;malamute&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;mink&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Norwegian_elkhound&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;panpipe&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;pillow&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;pretzel&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;refrigerator&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;school_bus&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;shower_cap&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;sombrero&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;streetcar&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;teddy&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;toy_poodle&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;volcano&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;wild_boar&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;African_hunting_dog&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;balance_beam&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;bathtub&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Blenheim_spaniel&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;brass&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;car_mirror&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;chow&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;consomme&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;cup&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;dumbbell&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;flamingo&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;golden_retriever&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;guenon&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;hog&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;jaguar&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;lacewing&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;long-horned_beetle&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mexican_hairless&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;mud_turtle&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ox&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pekinese&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pomeranian&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;racket&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;rule&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;seashore&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;snail&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;standard_poodle&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;swimming_trunks&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;tiger_shark&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;tub&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;weasel&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;wool&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;African_chameleon&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;badger&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;bassinet&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;black_widow&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;box_turtle&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;candle&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;chime&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;computer_keyboard&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;crossword_puzzle&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;drake&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;fiddler_crab&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;gibbon&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;grille&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;hen&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Irish_wolfhound&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;komondor&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;llama&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;medicine_chest&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;mountain_tent&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ostrich&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;patio&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;pole&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;quail&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;rock_crab&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;sea_lion&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;sleeping_bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;spotted_salamander&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sussex_spaniel&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;tick&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;tricycle&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;washer&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;wombat&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;accordion&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;armadillo&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;barrel&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;binder&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;borzoi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;bullfrog&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;cheetah&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;coil&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;crash_helmet&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Doberman&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Eskimo_dog&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;German_shepherd&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Greater_Swiss_Mountain_dog&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;hare&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;indri&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;killer_whale&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lhasa&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;maraca&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;monitor&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ocarina&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;parachute&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;pizza&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;projectile&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;revolver&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Scottish_deerhound&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Siamese_cat&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;space_shuttle&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;sulphur_butterfly&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;terrapin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;traffic_light&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;walking_stick&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Windsor_tie&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;American_black_bear&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Band_Aid&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;beaver&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;bolete&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;broccoli&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;carousel&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;clumber&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;cornet&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Dandie_Dinmont&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;electric_fan&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;French_bulldog&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gordon_setter&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;hammer&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;hummingbird&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;jersey&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;lawn_mower&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;macaque&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;miniature_poodle&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;necklace&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;padlock&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;picket_fence&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;pot&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;rapeseed&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;sandal&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;shoji&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;soccer_ball&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;stinkhorn&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;table_lamp&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;toilet_tissue&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;vacuum&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;whippet&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;agama&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;bald_eagle&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;beach_wagon&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;bloodhound&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;breakwater&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;car_wheel&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Christmas_stocking&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;convertible&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;curly-coated_retriever&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;earthstar&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;flat-coated_retriever&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;goldfish&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;guillotine&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;home_theater&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Japanese_spaniel&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Lakeland_terrier&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;lorikeet&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;microphone&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;mushroom&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;oxcart&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;pelican&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;poncho&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;radiator&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Saint_Bernard&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;seat_belt&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;snorkel&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;standard_schnauzer&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;swing&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;timber_wolf&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;turnstile&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;web_site&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;wreck&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;acorn&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ashcan&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;barrow&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;binoculars&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Boston_bull&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;bustard&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chesapeake_Bay_retriever&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;collie&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;crate&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;dock&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;espresso&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;German_short-haired_pointer&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;green_lizard&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;harp&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;iPod&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;kimono&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;lifeboat&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;marmot&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;moped&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Old_English_sheepdog&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;parallel_bars&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;plastic_bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;promontory&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;rhinoceros_beetle&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;screen&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Siberian_husky&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;spatula&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;sulphur-crested_cockatoo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;theater_curtain&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;tray&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;wallaby&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;wing&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='combined_archive.csv' id='combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66'>
+            <properties context=''>
+              <relation connection='textscan.10azget0u6zho81cscdd20iji53c' name='combined_archive.csv' table='[combined_archive#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='tweet_id' ordinal='1' />
+                  <column datatype='date' name='timestamp' ordinal='2' />
+                  <column datatype='string' name='source' ordinal='3' />
+                  <column datatype='string' name='expanded_urls' ordinal='4' />
+                  <column datatype='real' name='rating_numerator' ordinal='5' />
+                  <column datatype='real' name='rating_denominator' ordinal='6' />
+                  <column datatype='string' name='name' ordinal='7' />
+                  <column datatype='integer' name='year' ordinal='8' />
+                  <column datatype='string' name='jpg_url' ordinal='9' />
+                  <column datatype='real' name='img_num' ordinal='10' />
+                  <column datatype='string' name='text_url' ordinal='11' />
+                  <column datatype='string' name='text_tweet' ordinal='12' />
+                  <column datatype='string' name='dog_stage' ordinal='13' />
+                  <column datatype='integer' name='retweet_count' ordinal='14' />
+                  <column datatype='integer' name='favorite_count' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='image_prediction.csv' id='image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230'>
+            <properties context=''>
+              <relation connection='textscan.10azget0u6zho81cscdd20iji53c' name='image_prediction.csv' table='[image_prediction#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='tweet_id' ordinal='0' />
+                  <column datatype='integer' name='trial' ordinal='1' />
+                  <column datatype='string' name='prediction' ordinal='2' />
+                  <column datatype='real' name='confidence' ordinal='3' />
+                  <column datatype='boolean' name='is_dog' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[tweet_id]' />
+              <expression op='[tweet_id (image_prediction.csv)]' />
+            </expression>
+            <first-end-point object-id='combined_archive.csv_FD4C557B94384CF7A2C5768282ABEF66' />
+            <second-end-point object-id='image_prediction.csv_17CF8BD1AB3F4BACAD0F7A0FE0297230' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Tweet counts in month and year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_archive+' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dj406c0ng69fh13j6fy10o1zbpz'>
+            <column-instance column='[tweet_id]' derivation='Avg' name='[avg:tweet_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[timestamp]' derivation='MY' name='[my:timestamp:ok]' pivot='key' type='ordinal' />
+            <column caption='Timestamp' datatype='date' name='[timestamp]' role='dimension' type='ordinal' />
+            <column caption='Tweet Id' datatype='integer' name='[tweet_id]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:tweet_id:qk]</rows>
+        <cols>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[my:timestamp:ok]</cols>
+      </table>
+      <simple-id uuid='{8A04D149-7E70-488C-ACC5-966FC3B20A2F}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>The frequently tweeted breed of dog</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_archive+' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dj406c0ng69fh13j6fy10o1zbpz'>
+            <column caption='first_trial' datatype='boolean' name='[Calculation_1263259763371311107]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[trial] == 1' />
+            </column>
+            <column-instance column='[tweet_id (image_prediction.csv)]' derivation='Count' name='[cnt:tweet_id (image_prediction.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Is Dog' datatype='boolean' name='[is_dog]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1263259763371311107]' derivation='None' name='[none:Calculation_1263259763371311107:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_dog]' derivation='None' name='[none:is_dog:nk]' pivot='key' type='nominal' />
+            <column-instance column='[prediction]' derivation='None' name='[none:prediction:nk]' pivot='key' type='nominal' />
+            <column caption='Prediction' datatype='string' name='[prediction]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[trial]' role='measure' type='quantitative' />
+            <column caption='Tweet Id (Image Prediction.Csv)' datatype='integer' name='[tweet_id (image_prediction.csv)]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1263259763371311107:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]'>
+            <groupfilter function='member' level='[none:is_dog:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id (image_prediction.csv):qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]</column>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id (image_prediction.csv):qk]</rows>
+        <cols>([federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk] / ([federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk] / [federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]))</cols>
+      </table>
+      <simple-id uuid='{6A8EC291-B642-41BF-A94F-9FB0C7B0F14E}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>The most used dog pet names in tweets</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_archive+' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dj406c0ng69fh13j6fy10o1zbpz'>
+            <column-instance column='[tweet_id]' derivation='Count' name='[cnt:tweet_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Dog Stage' datatype='string' name='[dog_stage]' role='dimension' type='nominal' />
+            <column-instance column='[dog_stage]' derivation='None' name='[none:dog_stage:nk]' pivot='key' type='nominal' />
+            <column caption='Tweet Id' datatype='integer' name='[tweet_id]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]'>
+            <groupfilter from='&quot;doggo&quot;' function='range' level='[none:dog_stage:nk]' to='&quot;puppo&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]' value='154' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#76b7b2' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id:qk]</rows>
+        <cols>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]</cols>
+      </table>
+      <simple-id uuid='{7256971B-9306-41E8-BCFF-D6740F618FA4}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>The average retweet and favourites a tweet could get depending on the number of images in the tweet</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_archive+' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dj406c0ng69fh13j6fy10o1zbpz'>
+            <column-instance column='[favorite_count]' derivation='Avg' name='[avg:favorite_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[retweet_count]' derivation='Avg' name='[avg:retweet_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Favorite Count' datatype='integer' name='[favorite_count]' role='measure' type='quantitative' />
+            <column caption='Img Num' datatype='real' name='[img_num]' role='dimension' type='ordinal' />
+            <column-instance column='[img_num]' derivation='None' name='[none:img_num:ok]' pivot='key' type='ordinal' />
+            <column caption='Retweet Count' datatype='integer' name='[retweet_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:favorite_count:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:retweet_count:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]' value='126' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[Multiple Values]</rows>
+        <cols>([federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:img_num:ok] / [federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{3B81FEF9-BFC0-4B6B-BD54-66D7AD75067F}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>The most frequently retweeted and favorite breed of dog</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_archive+' name='federated.1dj406c0ng69fh13j6fy10o1zbpz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dj406c0ng69fh13j6fy10o1zbpz'>
+            <column caption='first_trial' datatype='boolean' name='[Calculation_1263259763371311107]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[trial] == 1' />
+            </column>
+            <column-instance column='[favorite_count]' derivation='Avg' name='[avg:favorite_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[retweet_count]' derivation='Avg' name='[avg:retweet_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Favorite Count' datatype='integer' name='[favorite_count]' role='measure' type='quantitative' />
+            <column caption='Is Dog' datatype='boolean' name='[is_dog]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1263259763371311107]' derivation='None' name='[none:Calculation_1263259763371311107:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_dog]' derivation='None' name='[none:is_dog:nk]' pivot='key' type='nominal' />
+            <column-instance column='[prediction]' derivation='None' name='[none:prediction:nk]' pivot='key' type='nominal' />
+            <column caption='Prediction' datatype='string' name='[prediction]' role='dimension' type='nominal' />
+            <column caption='Retweet Count' datatype='integer' name='[retweet_count]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[trial]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1263259763371311107:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]'>
+            <groupfilter function='member' level='[none:is_dog:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]</column>
+            <column>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]' />
+              <shape column='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:favorite_count:qk]</rows>
+        <cols>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[avg:retweet_count:qk]</cols>
+      </table>
+      <simple-id uuid='{A84BC2A7-DD61-4AAF-B417-1A9DEC78776F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:tweet_id:ok]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:year:qk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[tmn:timestamp:qk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[yr:timestamp:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{34F7ECE1-AB9A-4237-A175-F2A574575241}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[Trial (group)]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id (image_prediction.csv):qk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763330293761:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763359264770:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:tweet_id (image_prediction.csv):ok]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:tweet_id:ok]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[yr:timestamp:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3EC7B8C9-70C0-4BBF-ABE9-FAA8DDDA9DD2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[cnt:tweet_id:qk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:dog_stage:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:tweet_id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{62FBECD0-4198-4D31-A020-6289C3C93391}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:img_num:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5236A7C7-5DF9-4A36-9C14-4222611D65F1}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]' type='shape' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[:Measure Names]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:Calculation_1263259763371311107:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:is_dog:nk]</field>
+            <field>[federated.1dj406c0ng69fh13j6fy10o1zbpz].[none:prediction:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3B077CC2-EF8E-453C-AB44-37679E49C33B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nO29WYwkSZqY9/nt4XFH5J1ZmVlVWVVd1V09PcfOzM5e3CWWWFHALpcEdiS9
+      COALQT7pTRKgh5GgJ0EUBFAAseILXwRSK4nchcDVrDTLnZkdzk7P9PQ5XfeRWXkfcZ9+mh4i
+      Mzw8M+vqycquzrTvLf4wjzB3t9/st9/+30wRQggkknOK+nlXQCL5PJEKIDnXSAWQfC4Ebptb
+      t+/RaHWGMrfXxgsiAEKvT6fvA9BsNIZl1tfXANhbW6bWC6isr9HyAwD6rT1+9KMfs9eIf/OA
+      yO/xcHmNwOvw47/+IVuVJgD6q7k9ieTZrD+8xZMNl2ZjD0+x6Vc2sXUfc/YrfPPNebYffcR7
+      WwbpoEK+OInu16iTxxRtZmfnWNut8vbsAnefrLCztkomM8alvEdp7jI//cF30Z0y5bxDy4v4
+      W7/2TXbWlkkVFgncBruVGrUf/yXFuatyBJB8PhTHJllanMP3AuYvLKAJDy1dAq/F3bt3Cc0c
+      eVulNDmDqUbUmx2UwCWdToMIiYSGqihY6TT5XJonKytohs3y3U8Ym5jFdV1a7Q61SgWAzVqP
+      6UIKVdVZXLrO1966woULcyjSCyR5nYhCn063j2Fa2JZ5bBm/tUslzDBVSD3zt7ZWH9NXHRZn
+      xlhd2+LChdkjZX5pBQiCAN/3SaWeXRmJ5HXklzaBhBDIQUTyRUXOASTnGqkAknONVADJuUYq
+      gORcIxVAcq6RCiA510gFkJxrpAJIzjUnEgzX7XYJguAkfkoiOVVORAEcx8FxnJP4KYnkVJEm
+      kORcIxVAcq6RCiA510gFkJxrpAJIzjUn4gXq/exn7P3zPx5+zv+n/wn5P/j9k/hpieSVIkcA
+      yblGKoDkXCMVQHKukQogOddIBZCca6QCSM41L6QAIgpY29gEYHtjnXarwcPlNeRmKJIvOi+2
+      DqCoiCjC67XY2trC9sYpGYKOLzCiiChKqoKIIhkeLflC8EIKIMKAnc11ROjjeS5W4LPZcrkx
+      oyACFVVVEuUVVUXX5b67ktefF2qlqm7y1V/5OgDzC4uJ7/wTr5JEcnrISbDkXCMVQHKukQog
+      OddIBZCca6QCSM41UgEk5xqpAJJzjVQAyblGKoDkXCMVQHKukQogOddIBZCca6QCSM41L6YA
+      QlCr1xFRwOqTVTyvz+b23iuumkTy6nmxfIAooFKtk0lZaIrg3sMVCimdblBGkwkxki8wL6YA
+      QtCo7LJjCDZ2mpQLaWrNHhMqKOL4hBhN015JhSWSk+SIAnz66adcvXoVwzCGMkUzePudd1BV
+      lYmpCE3TiIRAVxX88PgfVhTl+C8kkteIIwrw/vvv0+v1ePvttzFNExg05gOFOOjZ5exZchY4
+      th1/8MEHfO9736PT6Zx2fSSSU+XICPDtb38bIQaT2oMRQCI5qxwZAQxdZXXlEffu3afR6X8e
+      dZJITo0jClDd3cWwMywsLlDb2yH6PGolkZwSRxSgPDlNxoj4v/6Pf0NpakZOdiVnmmPbd6vT
+      Z+nKZUxNNn/J2eZICxdRSOj79Lo93Kc5+SWSM8IRL1B97SGiOMelMCAUcvtbydnmyAhQmLtE
+      e+0ejUAnn5JuUMnZ5ogCKKrO9bfepJS26PkyoE1ytjl2lnv3ow/YqDTR5SRYcsY5toWPT4yx
+      vLyCPAFDctY5VgGq1QbjhQxdb98LJAS+7yOEwHVdRBThet5p1lMieSUckw/go6gmQtGxzYF+
+      iCjg3oNHzE/kWN6oouoahCFLN26gAkecRUIQRhFBFK8ja4qCpkqTSvJ6cYwCKNy5dRurUMIP
+      IjAAVSfrpPD8gGwuS73VpuhYhBEoQgyD5w4QQrBc3eNPPvr5UPbN+Yv85qUrr/h2JJKX4xgF
+      0Hnna18jV8ih7Se1iDAAEaKnx0kpPS7MTFJtdnF0Bd9Xjs0IUw/19qrMEpO8hhxjkwgyGYNP
+      7z/G1PeTX3SD+cWL5LMZJifH0QyL8XLxlKsqkZw8x4RCeGxuVPD7LoGQsaCSs80RBfD6Lg8f
+      PqDfbtDuy4UwydnmiAJYTo6vf/Uaa3sdHEMedSo52xzrl/QjgSkgkithkjPOsQpg2QX+wX/2
+      98lZcgSQnG2OKEDodfn5T9/lpz/7EDeUk2DJ2eZIF7/z+AFascjeZuXE/2x3Z5s//7M/HX6+
+      /uZbfP1bv3bi/yORvChHFGDyypv8rQtLgHLiKZG9bo+7t24NP5fKYyf6+xLJy3KkhauqxtqD
+      D/h3f/o9qh0Z8CY52xzbxWdzRWrdGiLwT7s+EsmpcqwC7O3WuTA9xs/e//i06yORnCrH+jln
+      5qa5s7LH3/ntr7zyCvTb29x5958OP5emv8b8jT965f8rkcBTFKBSreO1WoSnsC2W77fZfPjd
+      4WdVs6QCSE6NYxXAsVNMLVzANpLhy+3aNvceb5HNpel2XW7cfPNUKimRvCqOVYB6rUYml+dQ
+      mP/+UUiCrhcyXUrjBgLjKUckRWF46NqISAmfW04IebyS5PQ4ogBRGGCl0uzsNDjUrknny9y8
+      WSYMQ1AULEMh8I8/Ikk9lPyiqiqqqj23nKKo6LoMwZCcDkeM/N2NFbYbHfLZNNtbW4ndoTXd
+      wDAMbNvGtizkIUiSLzrH7A49SyFjE0YhjpOWu0NLzjRHbI3A69NodhDoZHPZz6NOEsmpcaSD
+      tzMFyhmbdqtO35O7Q0vONkcUoNeqstPooOkWtil3cZCcbY6YQKlsiV//jd9gsCOKnOZKzjbH
+      zHED/uxf/Wv+/M//gnpfBsNJzjbHKIDO9TcX0BVHbo4rOfMc6+Ucm5zBDVxSplyQkpxtjlWA
+      3a0ntKotmj2ZECM52xzbxafTBcyiSzltnXZ9JJJT5dgRQAgFNejTladESs44xyqAk8mhilBu
+      jCU58xxRgO0Hd7i/Vefq9TewD29nLgTbW5t4bp+dvepp1VEieWUcmQPoVor5+QlyloGuJRfC
+      GrtrbOx16fb6qCKkWyiiC3F8PkCU3FRrkA+QlAkhiMKjsjCUppfkdDiiAIZlcOfhIy4uzuNk
+      0uwvCQODcwJwO9QiH0tVmFJBEQqKcigfQFFQj5MdzhuAozKFI4drSCSviiMKkB2bwH7wgJ++
+      9wG/93u/iz7SFjPFSW44BQzTwA9CLFXBDxM6MkBRjggHSqI8txwcVSiJ5FVxRAEUVcfQdRwN
+      2q6PrceuUEVRsGwbAOsVBsr1/R4/fPjvh58nstO8M/vqd6iQnD+OXQe48c5XmKi1KDvmadcH
+      gI7X5l/+9F8MP399/lelAkheCccoQMD3/9/voaczWNlvUfyclEAiOQ2OmW1qTE6W8ULlyLYo
+      EslZ4xgFGHhrUk7q9GsjkZwyx/obp+YuELk9gsP7okgkZ4ynONwFURQdOQFeIjlrHKsAlZ0d
+      XM8/sjGWRHLWOOaMsB6pXBHNME78hBiJ5HXjSAtv7ayz0xWU0gZ9GQ4tOeMcUYDC3GWm0jC5
+      eI1iWq4BSM42xyyEKczOXzr9mjwHEQT0Pvxo+FnL5bCuXvkcayQ5C3xhst6F67L3P8Ynydhv
+      32T8v/6v2Pq/fzyUmaUs5V9/+/OonuQLyksrQBRFKIpCGEXohxNmThshqPwgHhVSC5NSASQv
+      xUspgIgCfv43f0Np9gKdRos3br719L3jxOGPT/GpHrPWcFgijpE99W/l2oXkJXgpBahub9Dz
+      Appdj/F8miAC7WknxBzKCBOROJoRdly5Y7LEEOKYk2SOyRyT2WSSl+SlFKA8Pc83SxOgQLXe
+      xtEVfPG0E2KSDqbBCTHqMeUOnxCjoB26diA7rtwhE0xR0HWdu9/9E0Q0UAQzk+fSb/5d3Lt3
+      EcFAphiGnEBLgM8wBzCtQULM1IR94pV5lez+T/8zUaMBgDZWZvZ/+Wefc40krwNyqVdyrpEK
+      IDnXSAWQnGukAkjONVIBJOeaL0woxKugsfaYMBhsAa+oGsX5JRorewT9/ZPqFShfnfocayh5
+      1ZxrBdh78Av8bhsA1TApzi+xd3uTfq07KCAV4MwjTSDJuUYqgORcc65NoBcl+MUKotkdfta/
+      eQ1FbuB7JpAK8CL4IXhB/FkGnJ4ZpAJ8Rtr31/Ab7eHn/JeWUDtr0K/Hhcaugy7PWXudkQrw
+      Gan84CNat1eGn7PX5lHXfwY7n8SFvvlfSAV4zXkpBfD7be7df4zlpOh2XG7cfPNV1UsiORVe
+      SgEUVSdXLBGGIdNlg34gMJ6WEHMoMWVwRFL43HJCREeSWo5LfnlaQkwQBBwS7svEqOhouf1r
+      DyeUDWRJYRiGx8pUIRJutTAM+dGDu9zd3R7K/t6bX2Ks+hHq9odxuWt/iP/4h4Qf/euhzPjt
+      /wZ19qtIXi0vNwK4XdqtNpOTY9RbPcYMhcB/WkJMMlllkBCjPbecoqgvlPzyrISYQ8J9mTIq
+      Olpu/9rDh9Pouk6gKIl5r6ZpR06x0TTtyLFQmqbR9X0q3c5QJhQFNehCdy8uR0jQbxDVHg9l
+      auTy8fvv88O/+suh7D/6/T/g8tIVPC8+wNw0TRRNT+zjqqkKmgjAi/8X3UZoJkHgj5TT0I48
+      r/PFS919Klvi+vUSAKXSK6mPZIRut8PO1tbws9vv88F7P+Pf/sn/PpT94R99m7FrX+GHjxpD
+      2dfmMlzr/Zzen/6Tocz85j+he/WPeO9HPxjKFi5f4fLla3QerA9lRimLNlXkcSVW0JydYjqd
+      gbXVuHKpFExMnti9fl6cb/WX4FWbPPmX3x1+Ln7zBs5//Cv8m08+GMpuTE7zB5evwV/+f/GF
+      F+aJ/vbv8tMnsSMgZ9vcmJrm3ZXHQ1MybZrcnJl95ffxWZEKIPnM+FHEf/cXfz78/Nb0DP/D
+      7/8h//1f/D+E+xpweWyMf/YPvv15VfG5SAWQnArbf/FTxP5es1raZvy3v8z/+f1bdPqD+Yxt
+      Gnz7d07fqygVQHIqVP76E6KeC4A5lmf8t7/Md3/6gN36IMSkkLH59u+8yff/1R/Tqu4CoOkG
+      f/cf/ZdU/td/gb8azz8m/9vv8O/+7N+yuvJkKPuH//gfs/zRH1Pd+BkAdnqSL//uP+Wn/9tf
+      0W/1ADBSFr/6n/9tiGLvoVQAyWtFdXOV+vZgUq4Zg82Z/dVVvPsPEuV2trdZXVkefo6iiE5j
+      hfrOxwA4uQsA1Deq9OoDb5iZ3t/J5L1/Dp0dQEaDSs45UgEk5xqpAJJzjVQAyblGKoDkXCMV
+      QHKu+UwKsLW+wocffoIfPb+sRPI685kUwA9hqpzBkwog+YLzmRRgamIMX03hyGU0yRccRfwS
+      ZwoJIfA8j9ryCqwsD3JOFDDn5+mXy6w1agghUBSFcjpDGoWH9+8Nrx8bH2dsvEBl7cfDcqns
+      DHbxCh+svzc4PklRKDtllopL9N57b/gfWr6A+cY1Wh8/Gl6rOTbO0gzt7XWEiFAYbHjllCfp
+      v/8BYj+OXrEt7Hfeobu3RRT4CAb5CumJWbrbTUIvRDD4zexcERpd8IOD6sBYjt7yFkGzO/zv
+      zI0F1N4W9BscVFKUltjuudR7cbnFYhnbrUC3EpcrLCJaW0SVB4P/RUGd+QrVnmBzPQ5VvrCw
+      SBRFrK/GIQCzF+axsgV2O8HweZVSOpmgSrTxfvx75SWCzBy1yu7wPtKZLCndpnN/bVg/o5xD
+      myryqLo3lOVsm2kngzLyvzgO4fgEP15+NPy9vJ3i5vQM/+HxIyIhUBTImBbvzM7R/nSZKAgH
+      784ySV+7wM/vbdLf32zA1DV+5Y0ZNu5/itfvAQJV1Zh/8yu4n94iareG7z71jW+w8ugRrVZz
+      WJ0bb92kVfmUfmcbIQS66TA29+vs3Nsg8AY5EJquMfnGHErtIQT9X14BAHzfx/d9HMdJKIYQ
+      4siJMGEYHkliOWuyMPBB1dFU5ZnlxH6rUZ7yeweHEY4m3hwnO+5Zn+fn/zRZ4PWJVBNNEYly
+      2ne+853v8EsQ7Z/zZWgqt27fJZXOYJnG4CUJwe3bt7Cdgezghfzor79Pxw0YL5eGsvd+/H3u
+      rVVYvDAzlD28f4fl5ccoVoZcOgVAvbLD8sYOY6Uiqqri9jrcvf+AarVOqVxC27925c4HfPRw
+      i6nJSUx9cMMbqyu0ei6Okx4ew7T++C637z3ALk6SsXSiwGVtfZNmq4WdymDsX7u7tc76k2We
+      7HWYmSgP6rK7wWatQ9pJDcv1GnvcfrRKJpvDNg0A3FaFh2t7ZDMOhjGwG0Xo8fjRY1o9n2I+
+      B0B1a5lHGzX6vT6FfG7wDIMed+4/wbBtUpY5kIUuv7h1l8ePH1GenMXUVYh8bt26zfLjh+TG
+      Z7ANDUTE7Vu/YOXxQ5zyNI45+O8f/OCv8IKIcil+/tsbqyyvbTMxXh7K7t25jWalsC1zKLt/
+      9w6qaZGyrKHs0cN77NSaw3fi9bvcvXefaq1GoVBCHznyynP7CEUdnjC6tbnB8qP7pAoT2OZA
+      tr78gHff/QnZyQWy9uAZbq2tcO/2x4TpKQrOQFbb3WS31sKyU5j7z3V1+T7NZpuWB4VM3ClH
+      YYBQtOF72lp/wtqTxyfoBlWgVq+xu7ubENfq9SOyhfl5bDuVkF26ep1L88nECdtOkc3lUUQc
+      vddsNvH9OK3PSqXJOybeyMF6QgiK4zOMFXIYetxbqgp4fjLHN18cI5srkLUGD1DVLXQCdtaX
+      qXbjvGHbNNEMC9syhjJN09lde0yl2Ytlpo2pCnr9OG1R0TQqO5vsVuOsLaIIO5MnZcYTqdLY
+      BDoRmj7SkykqUegn858VjZRtkU07hAepkIpKyk6RyziE4cH9KaRSDvmsQ7AvE1HExYV5HCeT
+      eNZCiCPpqX6/xfLqZrKc3+H+8kZCls2XCNz4GZi2Q7mQQ9OSKaaB79Lt9RPppWrQpR8qHBQU
+      QpArjnHt2htk7fjZ5LI5QsWimDGHMk1R8Hw/kcedTqdpdfrk9ztMRMTtO7fZ3lynN+K2tE0T
+      3XJOch1AwTYNxKGDU23LZDRn3u33aNbreEHSheT7Plsj6X8ApmFQabSZHIvzL23LIpvNJcr1
+      6ps83moMH4TbbbG5V0dXlUQuvN/vcPv2HXr+vlBE3L73AFON6Hn7DUwIUqkUnjDIj8zye90u
+      IgoolMbjO9Z0UBj2KoPLBa1WM7l3lqKhqcT5t0LQ7fVYffwAxRg5a00IGs0WaScdy6KQ1fUN
+      Nre2R8qF9Fwfzc6SsbThvXT7LsLMUBjWW9Dt9Qn0NGOZgeK2Ww1c16fX6xONtJzt3V081008
+      V8uyjyT/W5Z1RFbdWWV7r52QNVst0plsQgGe3PuEn3zwCW4QX+95HvVGY3haqAg9avUGfddP
+      tKRKtYqluFRaccfiBSFP7n/KXqs/lKmKwtbGE6qtA4VUGCuVKRTLdNvxnKHb7SJC72QXwmam
+      p4aH6B0we0gmhMC0U6hK8iG6/R65fD4p63VIp5ONvVJrUKsmR5Ti9GW+duPiMCndsFL0e13c
+      bhMvjBu7lSkwOzWBoe0/WkVl6fJFPD9A0+LHHYYRxVIJRcTXGpZF34ecY4yUC5icmSdjxzJd
+      N5mcmMAyYuXx/YCp6Rkyjj1yrU86kyfw4xeKqmOnUnj9kWR2TWd+ZgrbtmMF90NMDdKZuBf3
+      /ABLV3HSIzLPwzJ1UiO9fTZfpNNps7vyKSu7g0a7t7fHG9ff4vLihWG5TrOOmS4wUSrEdQ48
+      zEyJuYlkQrge+bS85C4b6ZTFXrUW985CkCpOcXV+etAx7eNkckxPTaHvP39VtxCBS6u2Q70X
+      /2a+kMfOlMjYcWejGyZTM3OkR56/qhlMTU5iHYysisL4xATplEmzPcg9EFGIaVm4oXqyCuAH
+      Idm0k5B5QUguE/dodsohCEPcfrzXpu+57FbqlApJBWi0e3j9Fn4QD//5bBonnU2UM02Dyu4O
+      G9uDGG9NN5ifnUI1HawREygKA8yUw0hbR1dVPM+Lt3ZRFLrtNqZtM3xPQrC1tU3aCNlt7veS
+      UcDWxha9fg9vpH4i8qnU4p4GQFdC9qrNeDRSFDJOigANEYwogIhotxr0R3pIgj6tfsidX3xA
+      Z3+UirwOzV5IrRonroe+S6PjUq9WEvdbb3Zp1KqJ+hRyafIzS8yVB+9la3ONtdVVaq34nVgp
+      B0NTEqOEppvU93aH6Y4H5CfnuXExab46mSydRi020URIrd7AtFOM7rERhSHNZovRXTsMy2J+
+      YQF1pFwYhNQb9cSo0HddxsdK+H78/A1DxzAtjJF5R21nnTuPVpmcmNivi2BrexdbPckRQER8
+      /OkdNjbWEuKPf3HriEzXDS4tLsY3FwZEXo/bD5YT5RYWFlicnyfct+977SZPNrZx7OQo02p3
+      STkOM5OxeVKrNyHy8MPYRu6029i2nRiWq9UqpckZHCN+FPlikcrmOu7I6JHJ5Wi5ChPZfRtU
+      1RkbK6KGHs1u3Ij7vR61yg7VkcaEolEqlxPzB0W3yKU0Wt0RsyPySKULw0kxQD/UyDsKN7/8
+      dRxzUMdUtkzWEpTKE8NyqUyea1cuks3Gvb3tpHnj2lJCBrC+vokXhMNG8sb1tyjkM4yNjQ3L
+      6IbJk0d3ebyeNEttJ025mOyoDE2j3UmaQG63i53JDXt2VJ0bN95krpxmeTNW0k7PY35hngNL
+      DiFQdRPXdRMjRbfTZnr+8vAZAHTaTfZqLdKp+Ll22y32dndpdmKzyHNdqrUGhjH4E0XTubgw
+      S9PVTk4B+p7P1cUZbGfk5Xku1y7NY6aSPbYS+axuxDatnUpTLJUo5JLlMrk85ZGGk8rkmJiY
+      wB01EYg3yRrtlzKZDIZpo408xGIhx/bWNqMdbBgEg52eR5Si7/o4toY3UlDRdIrFQmLvH91M
+      IaIAyxhxq5k2V65eY6KQHSln067vDYfg/Urjuh6FkVFvp9ICv43rx0N/r1VH6A6KEPF/h31a
+      /YjVlYf4w8m/Qiabw/NG7XiFdCaLP2pmDSpEdsQc03Wdnd09Oq3kyDV7YYEL08mtT0wdVjd2
+      ErJGvYZ1yKnR6vbQCOMRYP9etiot0ql4u8hsNk23003MEw1VQUvlyaXiOVM+n8P3PMRIQSfl
+      sLHygN0RJ0Q6m8cwDDIj/+F5PmMTk5gjQ//OboW0foIjgG2aaHaW2anxEZmFaqSYn4l7qma9
+      wm69TaedfNjZfCG2zZ/B9OQEpfJ4QhZFEelMJjE8BkFAFCV3cOt7PoaujHhJYGysxJPHy4lJ
+      eeh7WHY6Hik0g3IxT7dZpzs63OoauplCH/W3RwG6ncUe8e54/Tbrm5vUmvu9pBD0O1W6gU46
+      FTfEiVIGoafZ3NwY1rtYLqOKiEiMOA00k1TK5vLFS/FQLyI+vX2HTHpkAi0EK48foemx5wSg
+      XMgilLh+rXoVTTfxD+2W5wcRvW6ys6nubLC8nlSATDZHo1FLyBzHoVgaS3RA22uPef/2I4q5
+      eERqVvdYXXtCy92/P0Uhk3HY2dxITJb7foAmAvojz79UHmN24RLlbKx8nuthmgb+gdcsCkkX
+      yglvG0C5XEK1MienAAJBGAasrm+MyCCKAp6sxbJcoczC3Ayzx+wVEx2yLY8jlc5QKiQnxt1u
+      d+hXPsDzfUQUJVxkXq9HtjiWmBdUqzWioEd/5N2nUin8MKLTaiV+U1XE0J0I0G7UiHSblBU/
+      3DCM8LoNtquxgvuez403byaUoh8aXJgqsLsX2/FoFs36XvKlRBG1RpNsNpuQVfZ2aCRGlIhm
+      vUrX9UcuFviBn1g4C4MANxD0u/G92U6aXMZJ9K4A2Ww20amIKMQpzbI0m5wER5FgfMR8cntt
+      9io1wmhEaYUgOzHPt776ZnISnCty5cobFEc8brqV5u133iG9bxeJyKfZbHDnwUpitK3vbaPa
+      2UTHKSI/ORqpGu1mHVXXE/fi9vtsbm6doAnUbdPudBMuPLfXodnuknaSE+NKpTJciBreTL3B
+      5PgYnwVLE9y69zBhAqUdB1ON2NyLtysvFAuIMBiaQKHXR7MzLFy8Qs6K61Nv1GnXdlCtuKdq
+      1esoh7YRzJXGMA4N881Gjb4fkjlIwBaCvjtYLR8rFQcyRaFUHmdychJvxH/O/uptOpuLG61m
+      kDJV2u2RnliENDseod8fkUWYikrvkDdGCEFuxG3c67aZmJxiZqQDUjWdra1tTDMeKQKvx/3H
+      TxJbKQoRoes6xaxNrTMwq3qdFt1uh2hkfwUrlWFhfo7Q6+Me1EcErKwss7PXSIwKoe/SancS
+      yqJpWqKxKprJ5PgEVxZncEeWQ8IwQkRR7FyIAuqtLrphktpfhAy8Hp4f4Xleon30ul1UEZyc
+      AqScDBubWzTq8QTHTqXZ3NykUU96IXRNwxuxc5v1CkEo6HR7fBbCoE/PDRO9/fjUDEvz0/RH
+      Fj/63Q7rG5tDj49m2hj4PHxwn85IuYXLV/nqN38LK9zvJUOfVqePppsEXtzoAt9lr1JNPNhs
+      NsvW+iq7ByOAiKjUGzRre7Q68f2Fbpv7D1cYG4vNQxSF6elpysXY9ShCDzdQEot/aBYLk3mc
+      bDGWqRquUCimk9uxdzu9RGeTyRWYnppKTGSrO1s4aYftvfg9aYbN4uIisyNzAFUzWFhYwNEj
+      mvsuylQ6y/zFJa4e8gL12nXcSKPTPhhpVKbGy7iejxh5YoXyOG6nwfrmNk9DCEGn02F7e4vg
+      QFEin8hI4ZgjI7+qs3DxMpcvX6a4bxbpZgrLMqhurtJ243dcKpcwnOJJrgQrXLk4z8TUTEJ8
+      5dIiE5PTCdnG5ia7e7Ev38nkSFkarntosvYCNPZ2KU0tcnlxhtE9elvNBoFqM16IR6S+L1i6
+      fDExGUql88zNTieGUUVRUBWo1vdHD83g8tWrXLy0RKsav6h2s4ljKdx5FHu5DMNiZm6BuclB
+      uASqxtUrV8hm0snVXBHR6/XRjdiDsbO9RafTHXq9AB6v7vC1r7yNIuIOo7K9SstTcOyRxi4E
+      Igroe/F/RELgpCx6/eQC12GarRZdN8JU4/8I/T6bG+s0RrxZ/W6be/fusVbpMSEb2eoAAA4N
+      SURBVF2wj/upIZ3aDncfr5LLD5TZ81yerG6QzWWHk/nA6/FkfZOlazdYnJt+6m9F/RprlQ7j
+      s5cZS+8/L9UgbRssP7hLvfv0dhP6Lm6/j5UpYu97+iLf5dadB4xPjp/sSrChazQbycmtaRg0
+      m63hpM7rd5i5sMDMVHzD/U6bzd0a2WyalyUIfdZ2qmQsLTECKCLgo0/vJjwbYRCgHtrZuVGv
+      YaVzmCPaU9neoO1FzM/FvZrXa7O+sUmuENu/U/OXufHWl5nIxsO/YVkgQhrN5PxBQSRGPYBK
+      dZe9Sjx5nBgr0ul57I348vMZm5WVFUpj8XGt5fFppsp5WiMjZhQGXFi8PIyngYEjwLQsup3k
+      RPYwl69c40s3b7B0eWko080UlmkmJreDmC6dQCiD+KNnYJfm+L3f+sawYzFth7feuo6qMGwL
+      rdouQlG5c/8hQfj05BJFsyjms2gEuAfOCiHQdZO5CxcGcU9PQTMsdE3DUIOhNaAaFpevXIV+
+      6yRHAJVLS1fp90b8wYrC4uUr+F7s5nq0soZtaGRzsV3a7Xv86q9+C42Xz7ApT87w9vVrXLgw
+      n9imvdvtUywWmZmKTYxCIcvqk/XEZDsMfNRDMStEPj9/9z/QDfcbdujz8Ucf0/M8CoUCh+n3
+      Y7PIsDNcu3qFWiX2lPhuj75/KGJTUZkcn8AZ8QJh5rh2+UJihCpPTLO4uEhhxNOBohBECo4V
+      v/jtzTUePbxPpMZ2fLfVZGdnG+vQwuER9iNMR+sX+n0M0z5yv7qmUSoWD//CESKvw09+8i7N
+      Tjz6dFpNKtU6Bz7n4uQ8b1y9yq+8eYmNncpTfglUM83F+VkuXryIdaB4IuTRw4eEfp9q+9kj
+      nJPOcOHS9cREWyVEN+2TzwkeXUxBCHr9PuVyedjA5mamsJ0M7ZGeWSNgeWWZVrfPSeF6Hq7b
+      T0xQ6402OUeLY4GAiakpIt9L+KFDoTB4zvtCVefS0lUWJot0R2ZhzdouH3/4PtlyPJr5bo9O
+      34ufg4jYq9UxDB1zpKcKfB8nkyY7skqOojI2VqbXe85cSDW4evUytWpss09duMT0eAkRxqNM
+      oVRmZnIicZ7Ai/Lw0Qo5GwI1aer0ul18//AhJEfpeYJyMc/qarx7dDqbY6yYpXfY1BUR/Zc1
+      f1Wdm196m1RunPnxzDOLGprgww8/TLi6i2OTzF+4cIJbI0YBH3z4CQsjwyjAw3t3GJ+ZH9p9
+      mWyeTDa5klienKU0zDY5mbps7eyRdpyhWRS4PdAMZmcXyY70nOlckXQu2aOlM1lm5hbi1WFF
+      wTZVVjZ2mb6wGBcUEESCVCIWReXhJ79AzxQpl0qgqMzNXwLg7v37TJQG924YBtVKleJobxr0
+      eLCyTbH0Yt6w0RwMRYQ0mh3yZiwLwohG2yU/9uwGchxzs9M0Wh1yRrKP7NS3+WRlj7mZZ58N
+      cOXaNUK3Q92Lm1gmVyRjKtzdaXBtfgKikJ9/8AG5dIrJ+WsvXUdVN5mdnXluuXq9RSlr0vGi
+      pOmmKCc7CW63m+yN+rUB27ZpNptPuWj0coUTav6gaNy4cYM3rl8f3nCtsg0IHiyvPXO9IQpc
+      9moNOr1eMmRibw/dSjGyhIAiQoxUFnPEdOi1GtSareHkDwbuw1qthqbFjUGEHru1FjvbySjP
+      VruLaT77YL367io/ee9jaiPzrYf375LO5QdKdyB7/BjNMmkfWs94EZxMjunpaSZGInGjKOLi
+      G1/iazcuP/d6RVHRoz6V5mBUD7w+W1tbbFVaFLP7SqqozE2N0+oFWOaJGyMAdBq7rGxXSWWK
+      ZEdc3cv37/Bka+8kY4EgEgzDWg+wLAvbOuWTEhWFdDqNqqrDRjw2vcDC4kW+dP0S6jM0TdUt
+      1NAnY0KtG5s75bEy9b3dOLoUMFMZLNGnPmLnaobFzPRUIhq019zlb979WcI+1+wcRTMgXx51
+      g6q02w0q1eSq6mEKY7MUUwrFkdDs+cXLaGGfRis2n6bGy2TT6aSr9ZfA7XXY291NrMY+jZ2t
+      DTbrPnP7o49mmDTrVar1Go6zP59RFIIgIPR7uK9oixFFUUlnspSKxaEVEvkuXjhwdpyYAjQb
+      VUrl8WFGFkCrWWdje5dK5ekTnNNC2T8DTD/mfK/DlMolOp5CMR034mqtQWNvjWontlXD0EdR
+      tTiUOuhy684DGo0G7V6sFLphc/PtL7M0vz9cC8Hu+kNwxtjbHfV/KxgH6ZLPIuzT6IWkR+J5
+      Njc3yBTHKOXjOUW+UGJmZuZI8NpnJZXO0tpb5/7q1nPLtlstvIjhKrmiqBQLedK5MqkRs8rU
+      NSwne+R8tZMilSkyUUixurY2jJtSDQsnZaKL4OTmALlCmUKrC1rcy2VzBabGCvSF+YwrXz9a
+      rRamGtHuh9iZwctyHIcbX/0NxgqxN2b58SN0Kz3iftUolgpEkUgEY6magdvdpd3NkMsMrnfy
+      k0zTIl8csfcjH81MMz5WfnYFNYuMrdJstinlBx6e+cXnmyUnwfTCFVJd//kFvSbv3V9nemoK
+      c99u7LQ7YCVd3ZEYBKuNZu6dJIqqEro9Nta3mFpYwjIYRPdmcwjNPLkRoF6tIARHogLv3n1A
+      p/tsP/Trhu8FWKYWh1KHPqquU93bSwz/c3PzVHZ34rmCbnHp0mWWlpaoV2M3qOe59Pv9kchN
+      6HsBgdvD9UYakwgHpz0+ry2EHtVmD9c9Oa/Zi9BtN2i1WkSq8eyCQjB+4SpfvbEUh0MDjqXx
+      ZHUtfq4M1mZyhRIvEAf52RACK1fiS29eG87fosAfrsqfmAIUikWarRZ7u8lIwetvvsWNq1dO
+      6m9OhbnFi5QmLjCV2x+5ehUePdmgJ8xE5KeiaJTHyonhW0QhzWYTRYmjNOuVbXzMkXlBxM7m
+      Gqqdod0ayRNWTSbHyzj2s0fMaq3B7MxUIpT6NHAyeXqtCg8ePXlmOREF9F0X3Uzeh2qmEpGg
+      ncYekW7R7zTp+88x+z4jUehRq1bZqrSH6yaqYeH32tR3Vk/SC6RhKBGKqiV86p1mhfWtvadf
+      9xqiqBqZzEg4dHqC61evcO1COXkmsqqQSucSKXnNyjbvvvsTFPPgRStkC2PYakj3ICRB0bj+
+      1peYn51mcX5u5PdMOs1dao1kcslhLG0Q5NduP7vcq2B+6QaXZp/tpvV9n+r2Bp/efThsC36/
+      S88LKRSLw9VhXddpdXoYmpoYKU6Sdr2C6/qYOjRGUiwnxsfAzJ/gOoAI6XoR3a3bbIzPMVe0
+      6HU7tHohhqgCz/fXvrYoKnYqdUTc7zQHeaUjI4CTLXDz5k1SB/m6ioJpGkSKhojiF3DsRDzs
+      8mitgmE5TJSPrjgfkM6PYWh7pJ8zUpw0/W6bTtclCJ/tBTJtB9vSMXR9f0KvYNgOXm+FVC6e
+      31jpAm9cHYxiz3NMfFay5SmuO0VMDVquBww6q92dXXLFwgmOAKrG9Teu8pVv/Q7TeXNfpJFx
+      TOzUyy/EfBEwTZNmrTLc3YwoZHtnm1u37iRMoJ3NNaJI0Oo822avdwVLs3my+eeEGigKSugl
+      EkZOA9vJMD09zdtvXn92QSGw8xPcvLbIweqO1+/i+QHb21v0R3IWDm/0ddIoiorjpNBVwc5+
+      3JXfa5IulCA8wXBoULBTDqmUM4z3tiybaqWKH7z8UvwXAcN2yGacONxY1chnHMLAo9LYX3xS
+      VCan50jZZmJR6Tg2N9YolsfpPM+0iQJ0M0U+95wYn88J3+1w9+4dNnfrwzUX03bQVBUldLn9
+      4NGp1qdR3WNjt85EedCxhG6Xja1tarXaKz4lUlH4td/8LVaerD6/7BeQTqNGpFmJDCcrlWFx
+      cZF8JjaZVFWl2+0917lz+fIS3Z7L5HTumeU2t3fRlZB216WQe/1GV81I8Y2vfwNQ4nmUiJia
+      nqHR6TMx/hw37wlTq+wh7Azj+5tl2YUp3ilMQXSiI8BRWo0am5tbWLbz/MJfRIQ4knbZ6zRY
+      WV2l1oxdv4HvomkqlcazQ0JMy6ZQyCcypo6j0WyhqDrtZvWZ5T4vVE3Dsiysg60cGQQJrq2v
+      0Wy1EyEhp4GhK9y/c5vOMfv5v9KaZPNFsqfrqTtVxucuMn5I5mRyFHJ5xvaD3ohC+r7AMAxK
+      +Wf37C/KwvwCqmGB+OIc0KAZFo5t4pSmn6vgJ42TLXH5ooK5b6pGgce9+w9JWSe4LYpkQKdR
+      w7btEV+5YOPJY1yhndhy/8EGxNZpx1j9EggRUShPYkYdtqovH5z3y9BqNgh8f7gQqWgG46U8
+      QSikApw0qWwBt9/jwuxBBpfA8/znx/eccTTdpFAoUEhbiU2rXjlRSCZfwE7nhptqidCj1e2j
+      Gq8gIea843seumnE2zmqBjdu3sRt7iVSGM8dIuLho4es71SZfMYax4mjani9LoVSeWh6BW6X
+      rgfCa0sFOGnCwMN3/cRiURQEg42n/BcIIjuzCAxNR7My5J3nxBKdMErk8snHHw93hdAMG12J
+      iDBesRv0HJLO5snlW/H+9EBldxPVOLrV+LlC0XB7DR49XiadL5O1n57IfuJ/reqAGK5JaGaK
+      q1cHmYtyBDhhOq06j5cfUWnubyciQlS7gGMI0s7RcIrzhGMaOPkS2im3ukjRWZifT+wIeIBU
+      gBPGtFIsXXmD6bF9N6gQ1KsVsoViYveI84aIIpxMDtPQn7ulyknT67RRNP3YhUhpAp0kUcjm
+      5iYeVpwaqupcf+vtz7derwGB36fWaOG53jBA7rTI5ws0+u5gR8BDlpccAU6SyAW7zNX5cSr1
+      0w9Vfp3x+13absT05PgpNn3ot2tsVltsbm4d2Y8W4P8HNayX4v9qOFoAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 5' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 6' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
